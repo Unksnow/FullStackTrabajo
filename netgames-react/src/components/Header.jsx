@@ -1,36 +1,38 @@
 // src/components/Header.js
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
+  // Estilos para el nuevo header, aplicados directamente
+  const headerStyle = {
+    backgroundColor: '#60177e', // Mantenemos el color púrpura
+    padding: '20px 40px',     // Añadimos un poco de espacio
+  };
+
+  const listStyle = {
+    listStyleType: 'disc',  // Para mostrar los puntos (viñetas)
+    margin: 0,
+    padding: 0,
+  };
+
+  const linkStyle = {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '1rem',
+  };
+
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#60177e' }} data-bs-theme="light">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">NetGames</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/">Inicio</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/catalogo">Catalogo</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/perfil">Perfil</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/login">Login</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/register">Register</NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <header style={headerStyle}>
+      {/* El logo "NetGames" es opcional, ya que no aparece en la imagen 2 */}
+      {/* <h1 style={{color: 'white', margin: 0, marginBottom: '10px'}}>NetGames</h1> */}
+      <nav>
+        <ul style={listStyle}>
+          <li><Link to="/" style={linkStyle}>Inicio</Link></li>
+          <li><Link to="/catalogo" style={linkStyle}>Catalogo</Link></li>
+          <li><Link to="/perfil" style={linkStyle}>Perfil</Link></li>
+          <li><Link to="/login" style={linkStyle}>Login</Link></li>
+          <li><Link to="/register" style={linkStyle}>Register</Link></li>
+        </ul>
       </nav>
     </header>
   );

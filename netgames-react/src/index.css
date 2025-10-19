@@ -22,13 +22,23 @@ a:hover {
   color: #535bf2;
 }
 
+/* src/index.css o src/App.css */
+
 body {
+  /* Fondo de la imagen con el control de videojuegos */
+  background-image: url('/img/fondo_login.jpg'); /* ASEGÚRATE DE QUE ESTA RUTA Y NOMBRE DE ARCHIVO SEAN CORRECTOS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Opcional: mantiene el fondo fijo al hacer scroll */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  color: #ffffff; /* Color de texto blanco para que contraste */
+  font-family: Arial, sans-serif; /* Puedes ajustar la fuente */
 }
+
+/* El resto de tu CSS (como el del Header, etc.) sigue aquí debajo */
 
 h1 {
   font-size: 3.2em;
@@ -65,4 +75,60 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* Simplifica el contenedor principal de las categorías */
+.categorias {
+  display: block; /* Anula cualquier layout de flexbox o grid */
+  max-width: 800px; /* Establece un ancho máximo para el contenido */
+  margin: 40px auto; /* Centra el contenedor en la página */
+  padding: 0 20px;   /* Añade un poco de espacio en los costados */
+}
+
+/* Ajusta cada tarjeta de categoría para que la imagen y el texto estén en una fila */
+.categoria {
+  display: flex;         /* Usa flexbox para alinear imagen y texto */
+  flex-direction: row;   /* Coloca los elementos uno al lado del otro */
+  align-items: center;   /* Centra verticalmente la imagen y el texto */
+  margin-bottom: 50px;   /* Añade espacio entre cada categoría */
+}
+
+/* Limita el tamaño de la imagen dentro de la tarjeta */
+.categoria img {
+  width: 300px;        /* Ancho fijo para la imagen */
+  height: auto;
+  margin-right: 25px;  /* Espacio entre la imagen y el texto */
+  border-radius: 8px;  /* Opcional: suaviza las esquinas de la imagen */
+}
+
+/* Contenedor para el texto de la categoría */
+.categoria .tituloscat, .categoria .contenido {
+  flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* --- ESTILOS ADICIONALES PARA IGUALAR LA SEGUNDA IMAGEN --- */
+
+/* Asegura que el texto en la tarjeta no tenga estilos extra */
+.categoria h2, .categoria p {
+  font-weight: normal;
+  text-align: left;
+}
+
+.categoria h2 {
+    font-size: 1.25rem; /* Un tamaño más pequeño y estándar */
+}
+
+/* Anula completamente los estilos del botón "Ver más" para que parezca un enlace simple */
+.categoria .btn-more {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #0d6efd !important; /* Un color de enlace azul estándar */
+  text-decoration: underline !important;
+  font-size: 1rem !important;
+  text-transform: none !important; /* Le quita el estilo de mayúsculas si lo tuviera */
+  cursor: pointer;
+  display: inline !important; /* Asegura que se comporte como un enlace de texto */
 }
