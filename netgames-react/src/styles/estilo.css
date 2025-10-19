@@ -1,0 +1,148 @@
+body{
+  background-image: url('../img/videojuegos_1920x1080.jpg');
+}
+
+
+.UserLogin{
+  background-color: rgba(29, 114, 189, 0.9);
+  margin-top:10%;
+  margin-left: 15%;
+
+}
+
+.UserRegister{
+  background-color: rgba(29, 114, 189, 0.9); 
+  margin-top: 9%;
+  margin-left: 1%;
+  
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.categorias {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.categoria {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  gap: 40px;
+  border-bottom: 1px solid #222244;
+  padding-bottom: 32px;
+}
+
+.categoria img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.categoria:hover {
+  transform: scale(1.05);
+}
+
+.reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.reseña {
+  background: #1592b8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 2.0;
+  background-color: #f4f4f4;
+  color: #00eeff;
+}
+
+
+.btn-more {
+  background-color: #ff0580;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-more:hover,
+.btn-more:focus {
+  background-color: #e6006c;
+  outline: none;
+}
+
+/* === Estilos del Catálogo de Juegos === */
+.catalogo .card {
+  background-color: rgba(23, 26, 46, 0.9);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease-in-out;
+  color: #fff;
+}
+
+.catalogo .card:hover {
+  transform: translateY(-5px);
+}
+
+.catalogo img {
+  border-radius: 12px 12px 0 0;
+}
+
+.precio {
+  font-weight: bold;
+  color: #6c5ce7;
+  margin-bottom: 10px;
+}
