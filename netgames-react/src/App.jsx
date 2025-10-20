@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
@@ -9,13 +8,12 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-// Un layout para que el Header aparezca en todas las páginas
 function AppLayout() {
   return (
     <>
       <Header />
       <main>
-        <Outlet /> {/* Aquí se renderizará el componente de la ruta actual */}
+        <Outlet />
       </main>
     </>
   );

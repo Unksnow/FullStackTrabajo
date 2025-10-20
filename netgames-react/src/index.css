@@ -22,23 +22,18 @@ a:hover {
   color: #535bf2;
 }
 
-/* src/index.css o src/App.css */
-
 body {
-  /* Fondo de la imagen con el control de videojuegos */
-  background-image: url('/img/fondo_login.jpg'); /* ASEGÚRATE DE QUE ESTA RUTA Y NOMBRE DE ARCHIVO SEAN CORRECTOS */
+  background-image: url('/img/fondo_login.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Opcional: mantiene el fondo fijo al hacer scroll */
-  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+  background-attachment: fixed;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  color: #ffffff; /* Color de texto blanco para que contraste */
-  font-family: Arial, sans-serif; /* Puedes ajustar la fuente */
+  color: #ffffff; 
+  font-family: Arial, sans-serif;
 }
-
-/* El resto de tu CSS (como el del Header, etc.) sigue aquí debajo */
 
 h1 {
   font-size: 3.2em;
@@ -78,57 +73,50 @@ button:focus-visible {
 }
 
 
-/* Simplifica el contenedor principal de las categorías */
+
 .categorias {
-  display: block; /* Anula cualquier layout de flexbox o grid */
-  max-width: 800px; /* Establece un ancho máximo para el contenido */
-  margin: 40px auto; /* Centra el contenedor en la página */
-  padding: 0 20px;   /* Añade un poco de espacio en los costados */
+  display: block; 
+  max-width: 800px; 
+  margin: 40px auto; 
+  padding: 0 20px;   
 }
 
-/* Ajusta cada tarjeta de categoría para que la imagen y el texto estén en una fila */
 .categoria {
-  display: flex;         /* Usa flexbox para alinear imagen y texto */
-  flex-direction: row;   /* Coloca los elementos uno al lado del otro */
-  align-items: center;   /* Centra verticalmente la imagen y el texto */
-  margin-bottom: 50px;   /* Añade espacio entre cada categoría */
+  display: flex;        
+  flex-direction: row;   
+  align-items: center;   
+  margin-bottom: 50px; 
 }
 
-/* Limita el tamaño de la imagen dentro de la tarjeta */
 .categoria img {
-  width: 300px;        /* Ancho fijo para la imagen */
+  width: 300px;        
   height: auto;
-  margin-right: 25px;  /* Espacio entre la imagen y el texto */
-  border-radius: 8px;  /* Opcional: suaviza las esquinas de la imagen */
+  margin-right: 25px;  
+  border-radius: 8px; 
 }
 
-/* Contenedor para el texto de la categoría */
 .categoria .tituloscat, .categoria .contenido {
-  flex: 1; /* Permite que el texto ocupe el espacio restante */
+  flex: 1; 
 }
 
-/* --- ESTILOS ADICIONALES PARA IGUALAR LA SEGUNDA IMAGEN --- */
-
-/* Asegura que el texto en la tarjeta no tenga estilos extra */
 .categoria h2, .categoria p {
   font-weight: normal;
   text-align: left;
 }
 
 .categoria h2 {
-    font-size: 1.25rem; /* Un tamaño más pequeño y estándar */
+    font-size: 1.25rem; 
 }
 
-/* Anula completamente los estilos del botón "Ver más" para que parezca un enlace simple */
 .categoria .btn-more {
   background: none !important;
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  color: #0d6efd !important; /* Un color de enlace azul estándar */
+  color: #0d6efd !important; 
   text-decoration: underline !important;
   font-size: 1rem !important;
-  text-transform: none !important; /* Le quita el estilo de mayúsculas si lo tuviera */
+  text-transform: none !important; 
   cursor: pointer;
-  display: inline !important; /* Asegura que se comporte como un enlace de texto */
+  display: inline !important; 
 }

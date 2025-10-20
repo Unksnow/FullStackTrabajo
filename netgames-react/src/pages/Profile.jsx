@@ -1,4 +1,3 @@
-// src/pages/Profile.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -71,5 +70,4 @@ function Profile() {
   );
 }
 
-// LÍNEA CRUCIAL: Asegúrate de que esta línea exista al final
 export default Profile;
