@@ -1,15 +1,12 @@
-// SIMULACIÓN DEL CSS
 import { vi } from 'vitest';
 vi.mock('../src/styles/estilo.css', () => ({ default: {} }));
 
-// Imports normales
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, it, expect, beforeEach } from 'vitest';
 import Login from '../src/pages/Login'; 
 
-// --- SIMULACIÓN DE REACT-ROUTER-DOM ---
 const mockedNavigate = vi.fn();
 vi.mock('react-router-dom', async (importActual) => {
   const actual = await importActual();
@@ -18,9 +15,7 @@ vi.mock('react-router-dom', async (importActual) => {
     useNavigate: () => mockedNavigate,
   };
 });
-// --- FIN DE LA SIMULACIÓN ---
 
-// Simulamos 'alert'
 window.alert = vi.fn();
 
 describe('Componente Login', () => {
@@ -52,8 +47,7 @@ describe('Componente Login', () => {
     );
     const boton = screen.getByRole('button', { name: /Iniciar Sesión/i });
     
-    // --- CORRECCIÓN AQUÍ ---
-    fireEvent.submit(boton); // Usamos .submit() en lugar de .click()
+    fireEvent.submit(boton); 
 
     expect(window.alert).toHaveBeenCalledWith('Por favor, completa todos los campos.');
   });
