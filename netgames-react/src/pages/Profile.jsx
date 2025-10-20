@@ -28,6 +28,21 @@ function Profile() {
     navigate('/login');
   };
 
+  const handleDeletePurchase = (purchaseIndex) => {
+    if (!window.confirm("¿Estás seguro de que quieres eliminar esta compra del historial?")) {
+      return;
+    }
+
+    const allHistory = JSON.parse(localStorage.getItem('historialCompras')) || {};
+    const currentUserPurchases = allHistory[user] || [];
+
+    const newPurchases = currentUserPurchases.filter((_, index) => index !== purchaseIndex);
+
+    allHistory[user] = newPurchases;
+    localStorage.setItem('historialCompras', JSON.stringify(allHistory));
+    setPurchases(newPurchases);
+  };
+
   if (!user) {
     return <p>Cargando perfil...</p>;
   }
@@ -52,6 +67,7 @@ function Profile() {
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Fecha</th>
+                <th>Acción</th>
               </tr>
             </thead>
             <tbody>
@@ -62,13 +78,12 @@ function Profile() {
                   <td>${compra.precio.toLocaleString('es-CL')}</td>
                   <td>{compra.fecha}</td>
                   <td>
-                      <button 
-                        onClick={() => handleDeletePurchase(index)}
-                        className ="delete-button"
-                      >
-                        Borrar
-                      </button>
-
+                    <button 
+                      onClick={() => handleDeletePurchase(index)} 
+                      className="delete-button"
+                    >
+                      Borrar
+                    </button>
                   </td>
                 </tr>
               ))}

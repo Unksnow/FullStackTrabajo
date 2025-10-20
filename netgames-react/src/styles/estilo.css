@@ -381,3 +381,23 @@ body {
 .history-table tbody tr:hover {
   background-color: #2a2a4e;
 }
+
+.delete-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #5a6268;
+}
+
+.history-table th:last-child,
+.history-table td:last-child {
+  text-align: center;
+}
