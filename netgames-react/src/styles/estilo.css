@@ -9,8 +9,6 @@ body{
   
 }
 
-
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -52,8 +50,8 @@ section {
 }
 
 .categoria img {
-  width: 100%;
-  height: 350px;
+  width: 50%;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -115,7 +113,6 @@ body {
   outline: none;
 }
 
-/* === Estilos del Catálogo de Juegos === */
 .catalogo .card {
   background-color: rgba(23, 26, 46, 0.9);
   border: none;
@@ -139,8 +136,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* === INICIO DE ESTILOS DE LOGIN === */
-/* Pega esto en tu archivo estilo.css */
+/*LOGIN*/
 
 .login-page-container {
   display: flex;
@@ -151,7 +147,6 @@ body {
   padding-top: 2rem;
   position: relative;
   overflow: hidden; 
-  /* Ajusta la ruta de tu fondo si es necesario */
   background-image: url('../img/controller-background.png'); 
   background-repeat: no-repeat;
   background-position: bottom right; 
@@ -283,5 +278,3 @@ body {
   color: #c9efff;
   text-decoration: underline;
 }
-
-/* === FIN DE ESTILOS DE LOGIN === */

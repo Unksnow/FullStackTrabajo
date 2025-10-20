@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +6,6 @@ function Home() {
     <>
       <section className="categorias">
         <div className="categoria">
-          {/* La ruta ahora es un texto que empieza con /img/ */}
           <img src="/img/Shooters.jpg" alt="Juegos shooter"/>
           <div className="tituloscat">
               <h2>SHOOTERS</h2>
@@ -26,7 +24,7 @@ function Home() {
         </div>
 
         <div className="categoria">
-            <img src="/img/casual(1).jpg" alt="Videojuegos casuales"/>
+            <img src="/img/casual.jpg" alt="Videojuegos casuales"/>
             <div className="contenido">
                 <h2>VIDEOJUEGOS CASUALES</h2>
                 <p>Una colección de juegos únicos y peculiares...</p>
@@ -35,7 +33,6 @@ function Home() {
         </div>
       </section>
 
-      {/* --- Sección de Reseñas --- */}
       <section>
           <h2>Reseñas de Clientes</h2>
           <div className="reseñas">
@@ -57,7 +54,6 @@ function Home() {
           </div>
       </section>
 
-      {/* --- Sección Quiénes Somos --- */}
       <section>
           <h2>Quiénes Somos</h2>
           <p>
