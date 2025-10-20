@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/estilo.css';
 
 function Profile() {
   const [user, setUser] = useState(null);
@@ -32,20 +33,20 @@ function Profile() {
   }
 
   return (
-    <div>
-      <h1 className="text-center">Bienvenido, <span>{user}</span></h1>
-      <p className="text-center">Este es tu perfil de usuario.</p>
-      <div className="text-center mt-4 mb-5">
-        <button className="btn btn-danger" onClick={handleLogout}>Cerrar Sesión</button>
-      </div>
+    <div className="profile-container">
+      <h1 className="profile-welcome">Bienvenido, <span>{user}</span></h1>
+      <p className="profile-subtitle">Este es tu perfil de usuario.</p>
+      <button className="logout-button" onClick={handleLogout}>Cerrar Sesión</button>
 
-      <h3 className="text-center">🛒 Historial de Compras</h3>
+      <h3 className="history-title">
+        🛒 Historial de Compras
+      </h3>
       {purchases.length === 0 ? (
-        <p className="text-center text-muted">Aún no has realizado compras.</p>
+        <p className="no-purchases">Aún no has realizado compras.</p>
       ) : (
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped mt-3">
-            <thead className="table-dark">
+        <div className="table-container">
+          <table className="history-table">
+            <thead>
               <tr>
                 <th>#</th>
                 <th>Producto</th>
