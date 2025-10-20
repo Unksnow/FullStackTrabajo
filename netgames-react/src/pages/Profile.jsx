@@ -61,6 +61,15 @@ function Profile() {
                   <td>{compra.producto}</td>
                   <td>${compra.precio.toLocaleString('es-CL')}</td>
                   <td>{compra.fecha}</td>
+                  <td>
+                      <button 
+                        onClick={() => handleDeletePurchase(index)}
+                        className ="delete-button"
+                      >
+                        Borrar
+                      </button>
+
+                  </td>
                 </tr>
               ))}
             </tbody>

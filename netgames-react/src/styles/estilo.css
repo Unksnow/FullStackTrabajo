@@ -306,3 +306,78 @@ body {
 .profile-welcome span {
   color: #c9efff;
 }
+
+.profile-subtitle {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 3rem;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.history-title {
+  font-size: 2rem;
+  color: #8cb2f5;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.no-purchases {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a2e;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.history-table th,
+.history-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #2a2a4e;
+}
+
+.history-table thead {
+  background-color: #111122;
+}
+
+.history-table th {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8cb2f5;
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.history-table tbody tr:hover {
+  background-color: #2a2a4e;
+}
